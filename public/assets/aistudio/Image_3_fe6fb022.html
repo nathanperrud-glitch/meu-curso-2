@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Influvence - Crie Influenciadoras Realistas com IA</title>
+<!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,600;1,700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            brand: {
+              orange: '#FF5722',
+              'orange-dark': '#E64A19',
+              'orange-light': '#FFF7ED',
+              dark: '#111827',
+              muted: '#9CA3AF',
+              subtle: '#6B7280',
+              bgLight: '#F8F9FA',
+              borderLight: '#E5E7EB',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom CSS Blocks -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #111827;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+    }
+    .font-serif-italic {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+  </style>
+<style data-purpose="decorations">
+    .glow-aura {
+      background: radial-gradient(circle at 50% 50%, rgba(255, 87, 34, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+    .subtle-shadow {
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04), 0 20px 25px -5px rgba(0, 0, 0, 0.02);
+    }
+    .video-shadow {
+      box-shadow: 0 25px 50px -12px rgba(17, 24, 39, 0.25);
+    }
+  </style>
+<!-- END: Custom CSS Blocks -->
+</head>
+<body class="antialiased selection:bg-[#FF5722] selection:text-white">
+<!-- BEGIN: HeroSection -->
+<header class="relative pt-12 md:pt-20 pb-16 md:pb-24 px-4 bg-white overflow-hidden" data-purpose="hero-section">
+<div class="max-w-[1080px] mx-auto text-center flex flex-col items-center">
+<!-- Top Subtle Kicker/Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-bgLight border border-brand-borderLight text-[11px] md:text-xs font-semibold text-brand-subtle tracking-wider uppercase mb-6">
+<span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+        O Método Definitivo de Criação com IA
+      </div>
+<!-- Main Headline in 3 Lines -->
+<h1 class="text-3xl sm:text-5xl lg:text-[58px] leading-[1.12] font-black uppercase tracking-tight text-brand-dark max-w-4xl">
+        Crie influenciadoras<br/>
+<span class="text-brand-orange font-extrabold">tão realistas</span> que ninguém<br/>
+        vai acreditar que são IA.
+      </h1>
+<!-- VSL Video Mockup Container -->
+<div class="mt-10 md:mt-14 w-full max-w-[680px] relative rounded-2xl overflow-hidden video-shadow border border-gray-100 bg-gray-900 group cursor-pointer aspect-video flex items-center justify-center">
+<!-- Background Preview Image -->
+<img alt="Influenciadora realista criada por Inteligência Artificial" class="w-full h-full object-cover opacity-90 transition duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6CqRFL9eGR93Ci9opUBoiY8LFqeFme8r9xzW6OSZtmDRmxdfgX4CI6foHoUA-pvhN95KqHaChPV6iSAFYSYoRPWIP0PIQZcj4sK2aoOFdh-uiSfzADIVDivZkNS_36SBUkbGxFJpY5rQBDr4QTA0oHKOA4Fp0yuQEnjElp8xBOH4anpg1RI-cz8GsppcsE5Pi9t-8zUHDI2iaMUxPvkPYDJQuL3e9Tmb7mhyGWJLbI3BrkC0vBq86"/>
+<!-- Video Overlay Tint -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/30"></div>
+<!-- Video Floating Tags -->
+<div class="absolute top-4 left-4 flex flex-col items-start gap-1.5 z-10">
+<span class="bg-black/60 backdrop-blur-md text-white text-[11px] md:text-xs px-2.5 py-1 rounded-md font-medium border border-white/10 flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Sem aparecer
+          </span>
+<span class="bg-black/60 backdrop-blur-md text-white text-[11px] md:text-xs px-2.5 py-1 rounded-md font-medium border border-white/10 flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Conteúdo em massa
+          </span>
+</div>
+<!-- Center Play Button -->
+<div class="relative z-10 w-16 h-16 md:w-20 md:h-20 bg-black/70 group-hover:bg-brand-orange text-white rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20 transition-all duration-300 transform group-hover:scale-110 shadow-xl">
+<svg class="w-7 h-7 md:w-8 md:h-8 fill-current ml-1" viewbox="0 0 24 24">
+<path d="M8 5v14l11-7z"></path>
+</svg>
+</div>
+<!-- Bottom Timeline Mock -->
+<div class="absolute bottom-3 left-4 right-4 flex items-center gap-3 z-10 text-[11px] text-white/80 font-mono">
+<div class="h-1 flex-1 bg-white/30 rounded-full overflow-hidden">
+<div class="w-1/3 h-full bg-brand-orange"></div>
+</div>
+<span>03:42</span>
+</div>
+</div>
+<!-- Hero CTA Button -->
+<div class="mt-8 md:mt-10 flex flex-col items-center">
+<a class="inline-flex items-center justify-center px-8 md:px-10 py-4 md:py-4.5 rounded-full bg-brand-orange hover:bg-brand-orange-dark text-white font-bold text-sm md:text-base tracking-wide uppercase transition duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-orange-500/25" href="#oferta">
+          Quero criar a minha influenciadora
+        </a>
+<p class="text-xs text-brand-subtle mt-2.5 font-medium flex items-center gap-1.5">
+<svg class="w-3.5 h-3.5 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          Acesso imediato • Pagamento 100% seguro
+        </p>
+</div>
+</div>
+</header>
+<!-- END: HeroSection -->
+<!-- BEGIN: ValueProposition -->
+<section class="py-16 md:py-24 px-4 bg-brand-bgLight border-y border-brand-borderLight" data-purpose="value-proposition">
+<div class="max-w-[1080px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Copy & Narrative -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<span class="text-[11px] md:text-xs font-bold tracking-widest text-brand-orange uppercase mb-3">
+          VOCÊ NÃO PRECISA MAIS ESTAR NA FRENTE DA CÂMERA
+        </span>
+<h2 class="text-3xl md:text-4xl lg:text-[44px] leading-tight font-black uppercase text-brand-dark mb-6">
+          Agora você<br/>
+          pode criar<br/>
+<span class="text-brand-muted font-normal">quem estará.</span>
+</h2>
+<div class="space-y-4 text-brand-subtle text-sm md:text-base leading-relaxed">
+<p>
+            Estamos entrando em uma nova fase da criação de conteúdo. Hoje, uma única pessoa usando as ferramentas certas consegue criar personagens, imagens, vozes, vídeos, movimentos e narrativas completas.
+          </p>
+<p>
+            O que antes exigia estúdios caros, modelos profissionais e equipes inteiras de gravação agora é feito em minutos na tela do seu aparelho.
+          </p>
+<p class="font-medium text-brand-dark pt-1">
+            O <strong class="text-brand-orange">INFLUVENCE</strong> foi estruturado exatamente para ensinar esse passo a passo sem complicações.
+          </p>
+</div>
+</div>
+<!-- Right Column: Process Pipeline Card -->
+<div class="lg:col-span-5">
+<div class="bg-white rounded-2xl p-6 md:p-8 subtle-shadow border border-brand-borderLight flex flex-col gap-3">
+<div class="text-[11px] font-bold text-brand-subtle tracking-wider uppercase mb-2 flex items-center justify-between">
+<span>Fluxo de Criação</span>
+<span class="text-brand-orange">5 Etapas</span>
+</div>
+<!-- Item 1: Personagem -->
+<div class="flex items-center gap-3.5 p-3 rounded-xl bg-neutral-50 border border-neutral-100 hover:border-orange-200 transition">
+<div class="w-8 h-8 rounded-lg bg-orange-100 text-brand-orange flex items-center justify-center font-bold text-xs">01</div>
+<div>
+<p class="text-xs font-bold text-brand-dark">Personagem</p>
+<p class="text-[11px] text-brand-subtle">Identidade, nicho e traços faciais</p>
+</div>
+</div>
+<!-- Item 2: Imagem -->
+<div class="flex items-center gap-3.5 p-3 rounded-xl bg-neutral-50 border border-neutral-100 hover:border-orange-200 transition">
+<div class="w-8 h-8 rounded-lg bg-orange-100 text-brand-orange flex items-center justify-center font-bold text-xs">02</div>
+<div>
+<p class="text-xs font-bold text-brand-dark">Imagem Realista</p>
+<p class="text-[11px] text-brand-subtle">Geração com textura de pele e iluminação</p>
+</div>
+</div>
+<!-- Item 3: Consistência -->
+<div class="flex items-center gap-3.5 p-3 rounded-xl bg-neutral-50 border border-neutral-100 hover:border-orange-200 transition">
+<div class="w-8 h-8 rounded-lg bg-orange-100 text-brand-orange flex items-center justify-center font-bold text-xs">03</div>
+<div>
+<p class="text-xs font-bold text-brand-dark">Mesmo Rosto</p>
+<p class="text-[11px] text-brand-subtle">Manutenção do padrão em qualquer ângulo</p>
+</div>
+</div>
+<!-- Item 4: Movimento & Vídeo -->
+<div class="flex items-center gap-3.5 p-3 rounded-xl bg-neutral-50 border border-neutral-100 hover:border-orange-200 transition">
+<div class="w-8 h-8 rounded-lg bg-orange-100 text-brand-orange flex items-center justify-center font-bold text-xs">04</div>
+<div>
+<p class="text-xs font-bold text-brand-dark">Vídeo Dinâmico</p>
+<p class="text-[11px] text-brand-subtle">Animação e sincronização labial natural</p>
+</div>
+</div>
+<!-- Item 5: Conteúdo Final -->
+<div class="flex items-center gap-3.5 p-3 rounded-xl bg-brand-orange-light border border-orange-200 transition">
+<div class="w-8 h-8 rounded-lg bg-brand-orange text-white flex items-center justify-center font-bold text-xs">05</div>
+<div>
+<p class="text-xs font-bold text-brand-dark">Monetização</p>
+<p class="text-[11px] text-brand-subtle">Publicação para Reels, TikTok e Publis</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ValueProposition -->
+<!-- BEGIN: DeliverablesGrid -->
+<section class="py-16 md:py-24 px-4 bg-white" data-purpose="deliverables-grid">
+<div class="max-w-[1080px] mx-auto">
+<!-- Section Header -->
+<div class="text-center max-w-2xl mx-auto mb-14">
+<span class="text-[11px] md:text-xs font-bold tracking-widest text-brand-orange uppercase">O QUE VOCÊ VAI DOMINAR</span>
+<h2 class="text-2xl sm:text-4xl lg:text-[40px] font-black uppercase tracking-tight text-brand-dark mt-2">
+          Do zero a uma influenciadora<br/>
+<span class="text-brand-muted font-normal">digital completa.</span>
+</h2>
+</div>
+<!-- 4x2 Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+<!-- Card 1 -->
+<div class="bg-white p-5 md:p-6 rounded-2xl border border-brand-borderLight hover:border-orange-300 transition duration-300 subtle-shadow flex flex-col justify-between">
+<div>
+<div class="w-7 h-7 rounded-full bg-brand-bgLight text-brand-orange flex items-center justify-center text-xs font-bold mb-4">1</div>
+<h3 class="font-bold text-brand-dark text-sm md:text-base mb-2">Criação da Influenciadora</h3>
+<p class="text-xs text-brand-subtle leading-relaxed">Aprenda a construir uma personagem com identidade visual consistente e personalidade realista.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-5 md:p-6 rounded-2xl border border-brand-borderLight hover:border-orange-300 transition duration-300 subtle-shadow flex flex-col justify-between">
+<div>
+<div class="w-7 h-7 rounded-full bg-brand-bgLight text-brand-orange flex items-center justify-center text-xs font-bold mb-4">2</div>
+<h3 class="font-bold text-brand-dark text-sm md:text-base mb-2">Realismo de outro nível</h3>
+<p class="text-xs text-brand-subtle leading-relaxed">Aprenda técnicas para fugir do visual artificial e criar imagens com textura e iluminação naturais.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-5 md:p-6 rounded-2xl border border-brand-borderLight hover:border-orange-300 transition duration-300 subtle-shadow flex flex-col justify-between">
+<div>
+<div class="w-7 h-7 rounded-full bg-brand-bgLight text-brand-orange flex items-center justify-center text-xs font-bold mb-4">3</div>
+<h3 class="font-bold text-brand-dark text-sm md:text-base mb-2">O mesmo rosto. Sempre.</h3>
+<p class="text-xs text-brand-subtle leading-relaxed">Aprenda a manter a identidade da personagem entre diferentes fotos, cenas, roupas e ambientes.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white p-5 md:p-6 rounded-2xl border border-brand-borderLight hover:border-orange-300 transition duration-300 subtle-shadow flex flex-col justify-between">
+<div>
+<div class="w-7 h-7 rounded-full bg-brand-bgLight text-brand-orange flex items-center justify-center text-xs font-bold mb-4">4</div>
+<h3 class="font-bold text-brand-dark text-sm md:text-base mb-2">Movimentos realistas</h3>
+<p class="text-xs text-brand-subtle leading-relaxed">Transforme imagens em vídeos com gestos, expressões e movimentos muito mais fluidos.</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-white p-5 md:p-6 rounded-2xl border border-brand-borderLight hover:border-orange-300 transition duration-300 subtle-shadow flex flex-col justify-between">
+<div>
+<div class="w-7 h-7 rounded-full bg-brand-bgLight text-brand-orange flex items-center justify-center text-xs font-bold mb-4">5</div>
+<h3 class="font-bold text-brand-dark text-sm md:text-base mb-2">Conteúdo que prende</h3>
+<p class="text-xs text-brand-subtle leading-relaxed">Entenda como estruturar conteúdos pensados para Reels, TikTok, Stories, UGC e anúncios.</p>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-white p-5 md:p-6 rounded-2xl border border-brand-borderLight hover:border-orange-300 transition duration-300 subtle-shadow flex flex-col justify-between">
+<div>
+<div class="w-7 h-7 rounded-full bg-brand-bgLight text-brand-orange flex items-center justify-center text-xs font-bold mb-4">6</div>
+<h3 class="font-bold text-brand-dark text-sm md:text-base mb-2">Produção em escala</h3>
+<p class="text-xs text-brand-subtle leading-relaxed">Crie diferentes variações e formatos sem depender de gravações presenciais demoradas.</p>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="bg-white p-5 md:p-6 rounded-2xl border border-brand-borderLight hover:border-orange-300 transition duration-300 subtle-shadow flex flex-col justify-between">
+<div>
+<div class="w-7 h-7 rounded-full bg-brand-bgLight text-brand-orange flex items-center justify-center text-xs font-bold mb-4">7</div>
+<h3 class="font-bold text-brand-dark text-sm md:text-base mb-2">Ferramentas e IA</h3>
+<p class="text-xs text-brand-subtle leading-relaxed">Saiba exatamente quais tecnologias usar em cada etapa do processo e como acelerar tudo.</p>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="bg-white p-5 md:p-6 rounded-2xl border border-brand-borderLight hover:border-orange-300 transition duration-300 subtle-shadow flex flex-col justify-between">
+<div>
+<div class="w-7 h-7 rounded-full bg-brand-bgLight text-brand-orange flex items-center justify-center text-xs font-bold mb-4">8</div>
+<h3 class="font-bold text-brand-dark text-sm md:text-base mb-2">Monetização ativa</h3>
+<p class="text-xs text-brand-subtle leading-relaxed">Aprenda diferentes formas de aplicar a INFLUVENCE em perfis lucrativos, produtos e parcerias.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: DeliverablesGrid -->
+<!-- BEGIN: RealisticGalleryProof -->
+<section class="py-16 md:py-24 px-4 bg-brand-bgLight border-y border-brand-borderLight" data-purpose="realistic-gallery-proof">
+<div class="max-w-[1080px] mx-auto text-center">
+<!-- Section Title -->
+<span class="text-[11px] md:text-xs font-bold tracking-widest text-brand-orange uppercase">REALISMO SEM LIMITES</span>
+<h2 class="text-2xl sm:text-4xl lg:text-[42px] font-black uppercase tracking-tight text-brand-dark mt-2 mb-12">
+        Isso não é uma pessoa real.<br/>
+<span class="text-brand-muted font-normal">É o que você vai aprender a criar.</span>
+</h2>
+<!-- 4 Vertical Phone/Frame Gallery (9:16 ratio) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 items-center">
+<!-- Gallery Card 1 (Lateral) -->
+<div class="rounded-2xl overflow-hidden aspect-[9/16] bg-gray-200 border border-brand-borderLight relative group subtle-shadow">
+<img alt="Exemplo influenciadora estilo lifestyle" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTR_lfHUnHU5cEkgPC0Dxf2UrRfWI1grNxmvK6S_M1261nIFdGGgAtzexZgaLiCwXy878Am_j7v44zx3qoh_Jc0zC-fk6lOJwd3BYHiv7hg37OafO09mo2lnMz5ckv1zSZ2x9ugBh29BO6p-DlIlBuLq8ZbU8TdUaW4w3Wtn19z4vdvfB2kWIVPrWMV33wF6XjR6qrQ4MpEktnsclRB_gTJapINhr5Ql5zz-yCjrdX9vJC7PYcrCRs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
+<span class="text-[10px] text-white/90 font-mono tracking-wider">@influvence_ai #01</span>
+</div>
+</div>
+<!-- Gallery Card 2 (Central Destaque com Mockup de Celular) -->
+<div class="rounded-[28px] overflow-hidden aspect-[9/16] bg-black p-1.5 ring-2 ring-gray-900/10 shadow-2xl transform md:-translate-y-2">
+<div class="relative w-full h-full rounded-[22px] overflow-hidden">
+<img alt="Influenciadora retrato luz natural" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkV2JAzeiWZcleXvFGkPR0VqJWkl4aJkbm2S0Vr2fvfMRdEwAfNSJzjYIJoha9xN9jORsCe44cMevHZDFuC-PXJEUqgQV37Xu9unJ5JmlqVKSL6bV4z50A9wBuTC6U2JmEuqRkOKaeGtBqgbQhfa3BeyaRFlJbUCL9m0ud-sOwqLN5RDznxycvl8F7H3pd0k2mxtNqKkrCVUQrxNzupiZ_GnCF9a87wk6-GWqnfOIT3DbGVv1GoN1f"/>
+<div class="absolute top-2 inset-x-0 flex justify-center">
+<div class="w-16 h-3.5 bg-black rounded-full"></div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
+<span class="text-[10px] text-white font-mono tracking-wider">100% IA • CONSISTENTE</span>
+</div>
+</div>
+</div>
+<!-- Gallery Card 3 (Central Destaque com Mockup de Celular) -->
+<div class="rounded-[28px] overflow-hidden aspect-[9/16] bg-black p-1.5 ring-2 ring-gray-900/10 shadow-2xl transform md:-translate-y-2">
+<div class="relative w-full h-full rounded-[22px] overflow-hidden">
+<img alt="Influenciadora selfie maquiagem" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpqdhi5nSrtbYuVTizvh8_2r8LdXbtUhnNUvJLmKc5LVJbIIrzaqJrojgUn9aJ6NKKeo5NSX5szizcVVqh6QC9PtWKT-RRgwZiufv3Qw0fm9AbgF4rKvRiP19ZNWaYjeY3UEqepLronVWY4-LkLEdc9-XyV0Bm6DQaK7oSAHWT2wqA_PNLRW91w6p0wUUAqk1Y2-2DFeQ4s1YOcvF9G2uDiOSdTX5aH9ywc7AG9NiBNYu5U43THPQb"/>
+<div class="absolute top-2 inset-x-0 flex justify-center">
+<div class="w-16 h-3.5 bg-black rounded-full"></div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
+<span class="text-[10px] text-white font-mono tracking-wider">DETALHE DE PELE 8K</span>
+</div>
+</div>
+</div>
+<!-- Gallery Card 4 (Lateral) -->
+<div class="rounded-2xl overflow-hidden aspect-[9/16] bg-gray-200 border border-brand-borderLight relative group subtle-shadow">
+<img alt="Exemplo influenciadora estilo urbano" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA056k-0zRsjQqIHCBoAbJGDYb1tEGB_I9xS0rwxcKYQrf05rG9RRbgQXXLW1RmaXTHQz7aAsJwWOBFT0WhrWAX-CuXCTUH0SpbWblc_SO-a2OUcNNIW0LzfNG4YIc6EUnBfdDR95tcJVUePLXI0iph6UHkj-AS6teGt-uKxoS-va9A2P47hFVdaQxoXKaEuB2xn4sa1nsZEfsfmpdUo0yMQPmwcGyFsMCZ6NW1colXEZju7_EtYeqz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
+<span class="text-[10px] text-white/90 font-mono tracking-wider">@influvence_ai #04</span>
+</div>
+</div>
+</div>
+<p class="text-xs text-brand-muted mt-6 font-medium">
+        Todas as imagens acima foram geradas por inteligência artificial através das etapas do método.
+      </p>
+</div>
+</section>
+<!-- END: RealisticGalleryProof -->
+<!-- BEGIN: WorkflowInAction -->
+<section class="py-16 md:py-24 px-4 bg-white" data-purpose="workflow-in-action">
+<div class="max-w-[1080px] mx-auto text-center">
+<!-- Header -->
+<span class="text-[11px] md:text-xs font-bold tracking-widest text-brand-orange uppercase">VEJA A PRECISÃO</span>
+<h2 class="text-2xl sm:text-4xl lg:text-[44px] font-black uppercase tracking-tight text-brand-dark mt-1">
+        Veja a influencer <span class="font-serif-italic lowercase font-normal text-brand-orange text-3xl sm:text-5xl lg:text-[48px]">em ação.</span>
+</h2>
+<p class="text-xs md:text-sm text-brand-subtle max-w-lg mx-auto mt-2 mb-12">
+        Uma imagem. Algumas referências. Um prompt.<br/>
+        E uma nova realidade criada com inteligência artificial.
+      </p>
+<!-- Application Window Mockup -->
+<div class="bg-brand-bgLight rounded-2xl border border-brand-borderLight overflow-hidden subtle-shadow text-left">
+<!-- App Window Topbar -->
+<div class="bg-white border-b border-brand-borderLight px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-red-400"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+<div class="w-3 h-3 rounded-full bg-green-400"></div>
+<span class="ml-2 text-xs font-mono text-brand-muted">influvence-studio-v2.6.engine</span>
+</div>
+<span class="text-[11px] bg-neutral-100 text-brand-subtle px-2 py-0.5 rounded font-mono">Status: Pronto</span>
+</div>
+<!-- App Window Interior Workspace -->
+<div class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+<!-- Workspace Col 1: Dataset Reference Thumbnails -->
+<div class="lg:col-span-3 flex flex-col gap-3">
+<span class="text-[11px] font-bold uppercase tracking-wider text-brand-subtle">Referências Base</span>
+<div class="grid grid-cols-2 gap-2">
+<img alt="Face Ref A" class="rounded-lg border border-brand-borderLight aspect-square object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz2lJ9_lJJR3sPnB9qsMkvgWvqIRkmGTgD1lWmFzap2DoN147gLOs71TZZsCPF35l5U9fH2-zsMQJhBDvRl0wFdsEEqWfjpE2RfPQvsyvCphvG3IEZwb6DiKEAh88O4hwaRuzxnhUxTdmR1HcparTvhbKvwaNiiTyteRUV86L1kqNdFGpujHK7bLwy7xKZ5jWJIS4mNUHSgfD0bOboDRuVk_KbvbH16BjgtKkQD0t7VE8Lsp4XnaNI"/>
+<img alt="Face Ref B" class="rounded-lg border border-brand-borderLight aspect-square object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCArSKMarHMbWWaE10o8W4TOp97UENpc_edUqwDXHDN5bIAinNoXnRTXqu0yjFF5ZPPBQAjvvkIRNuQJ3eGv_wpmjpQZv2JF-eKABnT2eYwEDXk5DDOoCWXddi1omOMt-MMG5wEUwCE1Lt05fa-_q05pZvv8_wtrfnEqmdHBVgpdP9NtQ3o-5ffoECTgZMlMAxP2rdzVMZPlz2BDIFYZnIKBbJeVh-2ZgLgnkHwXA-MSCkCKGPTU0aX"/>
+<img alt="Face Ref C" class="rounded-lg border border-brand-borderLight aspect-square object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAacoJHC6CN4dky8OiMEI_zesMmWYTljG9gZDt7X82pgTMIRvxIsDDvrWBIMvmHvCq83tMx1NDdGj1KM7wqwnzTtRWmOqvXxwAXjJLhnLQacxX8KStFx4BQgtfoUcl1LYFxC1H5lYMybcAuyFQz9WMtCJDPuMsTYWDcIThbXAqaGB9jWPdgb3Ypqsy0BbsQX1LgKIwwmL5_kSZ6XsN2Aqb_FUGNVBm2GBRF9TuEZsun9GMOBvZ7MXzN"/>
+<div class="rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center aspect-square text-gray-400 text-xs font-medium">
+                +14 refs
+              </div>
+</div>
+<span class="text-[10px] text-brand-muted">LoRA Weight: 0.82 • High Fidelity</span>
+</div>
+<!-- Workspace Col 2: Prompt Node & Generation Logic -->
+<div class="lg:col-span-5 flex flex-col gap-3">
+<div class="bg-white p-4 rounded-xl border border-brand-borderLight shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-brand-dark flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-brand-orange"></span> Prompt Builder
+                </span>
+<span class="text-[10px] text-brand-muted font-mono">v4.1</span>
+</div>
+<p class="text-xs font-mono text-gray-600 bg-gray-50 p-2.5 rounded border border-gray-100 leading-relaxed">
+                photo of <span class="text-brand-orange font-bold">@influvence-model</span> sitting in a luxury car interior, sunlight hitting hair, direct camera look, ultra-realistic skin texture, 35mm lens, raw aesthetic --ar 9:16
+              </p>
+<!-- Parameters Chips -->
+<div class="mt-3 flex flex-wrap gap-1.5">
+<span class="text-[10px] bg-gray-100 px-2 py-0.5 rounded text-gray-700 font-mono">Denoising: 0.35</span>
+<span class="text-[10px] bg-gray-100 px-2 py-0.5 rounded text-gray-700 font-mono">Steps: 30</span>
+<span class="text-[10px] bg-orange-50 text-brand-orange px-2 py-0.5 rounded font-mono font-medium">FaceRestore: On</span>
+</div>
+<!-- Button CTA Inside App -->
+<div class="mt-4">
+<button class="w-full py-2 bg-brand-dark hover:bg-black text-white text-xs font-bold rounded-lg transition duration-200 flex items-center justify-center gap-2">
+<svg class="w-3.5 h-3.5 text-brand-orange" fill="currentColor" viewbox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"></path></svg>
+                  Renderizar Novo Conteúdo
+                </button>
+</div>
+</div>
+</div>
+<!-- Workspace Col 3: Rendered Output -->
+<div class="lg:col-span-4">
+<div class="relative rounded-xl overflow-hidden border border-brand-borderLight shadow-md aspect-[4/5] bg-neutral-900 group">
+<img alt="Render final em alta resolução" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHxSPMKtrK5cZDsFUwa83ATq_ddoC3HKhyLJjzCTrTzYsTH_FljMNy7fNyAHRAPnMJK1BwfmRfaX96-ZY7KzFqKNjRgKsg_n7k5P6Uk5hS1zIe1fnPSIukBZbwrVcHv6HFh5DasdRNVbpSGeoMvKtAObP2B1zIPSsnqad5xE6AObHbXBFslJ4Ntr466pgrflZCdUOIULHxNGBYo1gzzSLguXuQCZPY1S--fFhkKY2uK8U3XP7EozWV"/>
+<div class="absolute top-3 right-3 bg-green-500/90 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">
+                4K Render
+              </div>
+<div class="absolute bottom-3 left-3 right-3 bg-black/60 backdrop-blur-sm p-2 rounded-lg text-white text-[11px] flex justify-between items-center">
+<span>Consistência Facial</span>
+<span class="text-green-400 font-mono font-bold">99.4%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="text-xs text-brand-subtle mt-4">
+        Você não precisa começar do zero. Combine personagens, referências e ideias para construir novas identidades com consistência.
+      </p>
+</div>
+</section>
+<!-- END: WorkflowInAction -->
+<!-- BEGIN: MobileObjectionBreaker -->
+<section class="py-16 md:py-24 px-4 bg-brand-bgLight border-y border-brand-borderLight" data-purpose="mobile-objection-breaker">
+<div class="max-w-[1080px] mx-auto">
+<!-- Big White Rounded Container -->
+<div class="bg-white rounded-3xl p-8 md:p-14 border border-brand-borderLight subtle-shadow grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left: Copy & Cloud Explanation -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<span class="text-[11px] md:text-xs font-bold tracking-widest text-brand-orange uppercase mb-2">SEM COMPLICAÇÃO</span>
+<h2 class="text-3xl md:text-4xl lg:text-[44px] leading-tight font-black uppercase text-brand-dark mb-4">
+            Você não precisa<br/>
+<span class="font-serif-italic lowercase font-normal text-brand-orange text-3xl md:text-5xl">de computador.</span>
+</h2>
+<p class="text-sm md:text-base text-brand-subtle leading-relaxed mb-6">
+            Tudo roda na nuvem. Com o seu próprio celular, você já consegue criar personagens, gerar imagens ultra-realistas e colocar o conteúdo em movimento sem precisar de computadores caros ou placas de vídeo avançadas.
+          </p>
+<!-- Feature Cards Grid (Mobile Ready) -->
+<div class="grid grid-cols-2 gap-3 w-full mb-6">
+<div class="p-3.5 rounded-xl bg-brand-bgLight border border-brand-borderLight flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs font-bold">✓</div>
+<span class="text-xs font-bold text-brand-dark">Tudo na Nuvem</span>
+</div>
+<div class="p-3.5 rounded-xl bg-brand-bgLight border border-brand-borderLight flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs font-bold">✓</div>
+<span class="text-xs font-bold text-brand-dark">iOS e Android</span>
+</div>
+<div class="p-3.5 rounded-xl bg-brand-bgLight border border-brand-borderLight flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs font-bold">✓</div>
+<span class="text-xs font-bold text-brand-dark">Sem PC Gamer</span>
+</div>
+<div class="p-3.5 rounded-xl bg-brand-bgLight border border-brand-borderLight flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs font-bold">✓</div>
+<span class="text-xs font-bold text-brand-dark">Crie de Qualquer Lugar</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-orange-50/70 border border-orange-100 text-xs text-brand-subtle">
+<strong class="text-brand-orange">Se você tem celular, você já pode começar:</strong> toda a operação acontece online, em servidores dedicados de altíssima velocidade.
+          </div>
+</div>
+<!-- Right: Mobile Device Mockup Frame -->
+<div class="lg:col-span-5 flex justify-center">
+<div class="relative w-[260px] sm:w-[280px] h-[520px] bg-black rounded-[44px] p-3 shadow-2xl ring-1 ring-gray-900/10">
+<!-- Dynamic Island -->
+<div class="absolute top-5 inset-x-0 flex justify-center z-20">
+<div class="w-24 h-5 bg-black rounded-full border border-neutral-800"></div>
+</div>
+<!-- Screen Area -->
+<div class="w-full h-full bg-neutral-900 rounded-[34px] overflow-hidden relative flex flex-col pt-10">
+<img alt="Aplicativo rodando no celular" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3WGDKEy9XpnOyM6vvgXtVpIC2MdWZ4jI27ZRLo8ss1Nc89JTdEjZT1-veQjUvCuxk5EJJMz4u1SEEbr0eh5mg6h41gz3pKbFE9AiC9L1qTcHAgQqOPyV61sdKQBYQQgaqxKs-49Id9z3ztYqUDlpB-KZntwbi1T3lX_c8DT1lpZPY7a8WYbmWIeTcc4Ovn65-MfzXPcaJTcwAtv3czgtimhb0Pbpa2r7ISXk0wStr_1WUc392iQ84"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30 flex flex-col justify-end p-4">
+<div class="bg-black/60 backdrop-blur-md p-3 rounded-2xl border border-white/10 text-white">
+<p class="text-[11px] font-bold">Render Mobile Concluído</p>
+<p class="text-[9px] text-gray-300 mt-0.5">Tempo total de processamento: 14s</p>
+<div class="mt-2 w-full bg-brand-orange text-center py-1.5 rounded-lg text-[10px] font-bold">
+                    Exportar para Reels
+                  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: MobileObjectionBreaker -->
+<!-- BEGIN: ThreeStepMethod -->
+<section class="py-16 md:py-24 px-4 bg-white" data-purpose="three-step-method">
+<div class="max-w-[1080px] mx-auto text-center">
+<!-- Section Title -->
+<span class="text-[11px] md:text-xs font-bold tracking-widest text-brand-orange uppercase">O MÉTODO</span>
+<h2 class="text-2xl sm:text-4xl lg:text-[42px] font-black uppercase tracking-tight text-brand-dark mt-2 mb-16">
+        Da ideia ao conteúdo<br/>
+<span class="text-brand-muted font-normal">em 3 etapas.</span>
+</h2>
+<!-- 3 Columns Layout with Step Numbers -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative text-left">
+<!-- Step 01 -->
+<div class="flex flex-col items-start bg-brand-bgLight md:bg-transparent p-6 md:p-0 rounded-2xl border md:border-0 border-brand-borderLight">
+<span class="text-4xl lg:text-5xl font-black text-brand-orange/30 font-mono mb-2">01</span>
+<h3 class="text-lg font-black uppercase text-brand-dark tracking-wide mb-2 flex items-center gap-2">
+            Crie
+          </h3>
+<p class="text-xs md:text-sm text-brand-subtle leading-relaxed">
+            Construa uma influenciadora digital com identidade própria, arquétipo refinado e aparência extremamente realista.
+          </p>
+</div>
+<!-- Step 02 -->
+<div class="flex flex-col items-start bg-brand-bgLight md:bg-transparent p-6 md:p-0 rounded-2xl border md:border-0 border-brand-borderLight">
+<span class="text-4xl lg:text-5xl font-black text-brand-orange font-mono mb-2">02</span>
+<h3 class="text-lg font-black uppercase text-brand-dark tracking-wide mb-2 flex items-center gap-2">
+            Dê Vida
+          </h3>
+<p class="text-xs md:text-sm text-brand-subtle leading-relaxed">
+            Transforme o personagem em imagens e vídeos com movimento, expressão facial, voz clonada e cenários dinâmicos.
+          </p>
+</div>
+<!-- Step 03 -->
+<div class="flex flex-col items-start bg-brand-bgLight md:bg-transparent p-6 md:p-0 rounded-2xl border md:border-0 border-brand-borderLight">
+<span class="text-4xl lg:text-5xl font-black text-brand-orange/30 font-mono mb-2">03</span>
+<h3 class="text-lg font-black uppercase text-brand-dark tracking-wide mb-2 flex items-center gap-2">
+            Publique
+          </h3>
+<p class="text-xs md:text-sm text-brand-subtle leading-relaxed">
+            Transforme o material gerado em conteúdos virais preparados para redes sociais, contratos publicitários e vendas.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ThreeStepMethod -->
+<!-- BEGIN: EverythingYouNeed -->
+<section class="py-16 md:py-24 px-4 bg-brand-bgLight border-y border-brand-borderLight" data-purpose="everything-you-need">
+<div class="max-w-[1080px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left: Headline & Introduction -->
+<div class="lg:col-span-5 flex flex-col items-start">
+<span class="text-[11px] md:text-xs font-bold tracking-widest text-brand-orange uppercase mb-2">CONTEÚDO COMPLETO</span>
+<h2 class="text-3xl sm:text-4xl font-black uppercase text-brand-dark mb-4 leading-tight">
+          Tudo que<br/>
+          você precisa<br/>
+<span class="text-brand-muted font-normal">para começar.</span>
+</h2>
+<p class="text-xs md:text-sm text-brand-subtle leading-relaxed">
+          Um caminho direto da criação da personagem até a produção de conteúdo pronto para o público. Sem enrolação e direto ao ponto.
+        </p>
+</div>
+<!-- Right: Structured Checklist Card (2 Columns inside) -->
+<div class="lg:col-span-7">
+<div class="bg-white p-6 md:p-8 rounded-2xl border border-brand-borderLight subtle-shadow">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-xs md:text-sm text-brand-dark font-medium">
+<div class="flex items-center gap-2.5">
+<span class="text-brand-orange font-bold text-sm">✓</span>
+<span>Treinamento completo INFLUVENCE</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="text-brand-orange font-bold text-sm">✓</span>
+<span>Processo de criação de rosto</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="text-brand-orange font-bold text-sm">✓</span>
+<span>Criação de personagens consistentes</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="text-brand-orange font-bold text-sm">✓</span>
+<span>Prompts e estruturas utilizadas</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="text-brand-orange font-bold text-sm">✓</span>
+<span>Ferramentas recomendadas</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="text-brand-orange font-bold text-sm">✓</span>
+<span>Criação de imagens realistas</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="text-brand-orange font-bold text-sm">✓</span>
+<span>Criação de vídeos</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="text-brand-orange font-bold text-sm">✓</span>
+<span>Movimentos e sincronização</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="text-brand-orange font-bold text-sm">✓</span>
+<span>Estratégia para conteúdo</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="text-brand-orange font-bold text-sm">✓</span>
+<span>Estrutura para monetização</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="text-brand-orange font-bold text-sm">✓</span>
+<span>Atualizações futuras conforme aplicável</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="text-brand-orange font-bold text-sm">✓</span>
+<span>Comunidade exclusiva de membros</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: EverythingYouNeed -->
+<!-- BEGIN: PricingPlans -->
+<section class="py-16 md:py-24 px-4 bg-white" data-purpose="pricing-plans" id="oferta">
+<div class="max-w-[1080px] mx-auto text-center">
+<!-- Section Header -->
+<span class="text-[11px] md:text-xs font-bold tracking-widest text-brand-orange uppercase">ESCOLHA COMO COMEÇAR</span>
+<h2 class="text-2xl sm:text-4xl lg:text-[42px] font-black uppercase tracking-tight text-brand-dark mt-2">
+        Do primeiro conteúdo<br/>
+<span class="text-brand-muted font-normal">à operação completa.</span>
+</h2>
+<p class="text-xs md:text-sm text-brand-subtle max-w-md mx-auto mt-2 mb-14">
+        Duas formas de entrar no INFLUVENCE. Comece com o método completo ou domine também infoprodutos, TikTok Shop e escala.
+      </p>
+<!-- Pricing Comparison Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch text-left">
+<!-- PLAN 1: START -->
+<div class="bg-white rounded-3xl p-7 md:p-9 border border-brand-borderLight subtle-shadow flex flex-col justify-between hover:border-gray-300 transition duration-300">
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-wider text-brand-subtle">INICIANTE</span>
+</div>
+<h3 class="text-2xl font-black text-brand-dark tracking-tight">START</h3>
+<p class="text-xs text-brand-subtle mt-1 mb-6">
+              Conheça de perto o que uma influenciadora IA pode gerar com conteúdo e vendas.
+            </p>
+<!-- Target Audience Box -->
+<div class="bg-brand-bgLight p-3 rounded-xl border border-brand-borderLight text-[11px] text-brand-dark font-medium mb-6">
+<strong>Ideal para:</strong> Criar • Desenvolver • Novatos Influencer IA
+            </div>
+<!-- Features Checklist -->
+<div class="space-y-3 text-xs text-brand-subtle mb-8">
+<div class="flex items-center gap-2">
+<span class="text-green-600 font-bold">✓</span>
+<span class="text-brand-dark">Estratégia completa de posicionamento</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-green-600 font-bold">✓</span>
+<span class="text-brand-dark">Criação de influenciadoras de IA</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-green-600 font-bold">✓</span>
+<span class="text-brand-dark">Influenciadoras extremamente realistas</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-green-600 font-bold">✓</span>
+<span>IA utilizada para criar os conteúdos</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-green-600 font-bold">✓</span>
+<span>Criação de imagens e vídeos com IA</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-green-600 font-bold">✓</span>
+<span>Criação de conteúdos virais</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-green-600 font-bold">✓</span>
+<span>Estrutura comercial da personagem</span>
+</div>
+</div>
+</div>
+<!-- Price & CTA Box -->
+<div class="border-t border-brand-borderLight pt-6">
+<span class="text-[11px] text-brand-muted font-medium">Pagamento único de</span>
+<div class="flex items-baseline gap-1 mt-1 mb-4">
+<span class="text-sm font-bold text-brand-dark">R$</span>
+<span class="text-4xl md:text-5xl font-black text-brand-dark tracking-tight">47</span>
+<span class="text-base font-bold text-brand-dark">,90</span>
+</div>
+<a class="w-full py-4 rounded-xl bg-brand-orange hover:bg-brand-orange-dark text-white font-bold text-xs md:text-sm uppercase tracking-wider text-center block transition shadow-md" href="#">
+              Quero começar agora
+            </a>
+<p class="text-[10px] text-center text-brand-muted mt-2">Compra segura • Acesso vitalício</p>
+</div>
+</div>
+<!-- PLAN 2: PLUS (DESTAQUE) -->
+<div class="bg-brand-orange-light rounded-3xl p-7 md:p-9 border-2 border-brand-orange/40 shadow-xl flex flex-col justify-between relative">
+<!-- Top Badge -->
+<div class="absolute -top-3.5 right-8 bg-brand-orange text-white text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow">
+            Mais Vendido
+          </div>
+<div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-wider text-brand-orange">RECOMENDADO • MÁXIMO DE RESULTADOS IA</span>
+</div>
+<h3 class="text-2xl font-black text-brand-dark tracking-tight">PLUS</h3>
+<p class="text-xs text-brand-subtle mt-1 mb-6">
+              Domine as duas principais estratégias para ganhar dinheiro com influenciadores IA.
+            </p>
+<!-- Target Audience Box -->
+<div class="bg-white p-3 rounded-xl border border-orange-200 text-[11px] text-brand-dark font-medium mb-6">
+<strong>Ideal para:</strong> Influencer IA • Infoprodutos • TikTok Shop • Escala
+            </div>
+<!-- Features Checklist -->
+<div class="space-y-3 text-xs text-brand-subtle mb-8">
+<div class="flex items-center gap-2">
+<span class="text-brand-orange font-bold">✓</span>
+<strong class="text-brand-dark">Tudo que existe no plano Start</strong>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-brand-orange font-bold">✓</span>
+<span class="text-brand-dark">Metodologia e envio de produtos</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-brand-orange font-bold">✓</span>
+<span class="text-brand-dark">Máquina de influenciar completa</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-brand-orange font-bold">✓</span>
+<span class="text-brand-dark">Criação rápida e contínua com IA</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-brand-orange font-bold">✓</span>
+<span class="text-brand-dark">Estratégia completa para monetização</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-brand-orange font-bold">✓</span>
+<span class="text-brand-dark">Conteúdo para vender em escala</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-brand-orange font-bold">✓</span>
+<span class="text-brand-dark">Estrutura de influenciador para marcas</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-brand-orange font-bold">✓</span>
+<span class="text-brand-dark">TikTok Shop no zero</span>
+</div>
+</div>
+</div>
+<!-- Price & CTA Box -->
+<div class="border-t border-orange-200/80 pt-6">
+<span class="text-[11px] text-brand-muted font-medium">Pagamento único de</span>
+<div class="flex items-baseline gap-1 mt-1 mb-4">
+<span class="text-sm font-bold text-brand-dark">R$</span>
+<span class="text-4xl md:text-5xl font-black text-brand-dark tracking-tight">197</span>
+<span class="text-base font-bold text-brand-dark">,90</span>
+</div>
+<a class="w-full py-4 rounded-xl bg-brand-orange hover:bg-brand-orange-dark text-white font-bold text-xs md:text-sm uppercase tracking-wider text-center block transition shadow-lg shadow-orange-500/30" href="#">
+              Quero o acesso completo
+            </a>
+<p class="text-[10px] text-center text-brand-muted mt-2">Compra segura • Acesso vitalício imediato</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PricingPlans -->
+<!-- BEGIN: FAQSection -->
+<section class="py-16 md:py-24 px-4 bg-brand-bgLight border-t border-brand-borderLight" data-purpose="faq-section">
+<div class="max-w-[1080px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- FAQ Left: Header -->
+<div class="lg:col-span-4 flex flex-col items-start">
+<span class="text-[11px] md:text-xs font-bold tracking-widest text-brand-orange uppercase mb-2">FAQ</span>
+<h2 class="text-3xl md:text-4xl font-black uppercase text-brand-dark tracking-tight mb-3">
+          Perguntas<br/>
+<span class="text-brand-muted font-normal">frequentes.</span>
+</h2>
+<p class="text-xs md:text-sm text-brand-subtle">
+          Informações diretas antes de você começar.
+        </p>
+</div>
+<!-- FAQ Right: Accordion Items -->
+<div class="lg:col-span-8 flex flex-col divide-y divide-brand-borderLight border-y border-brand-borderLight">
+<!-- FAQ Item 1 -->
+<details class="group py-4 cursor-pointer">
+<summary class="flex justify-between items-center text-sm md:text-base font-bold text-brand-dark list-none">
+<span>O que é o INFLUVENCE?</span>
+<span class="text-brand-subtle group-open:rotate-45 transition transform duration-200 text-lg font-mono">+</span>
+</summary>
+<p class="text-xs md:text-sm text-brand-subtle mt-3 leading-relaxed">
+            É o treinamento prático passo a passo onde você aprende a criar influenciadoras digitais ultra-realistas com inteligência artificial, manter o mesmo rosto sempre consistente e gerar vídeos e imagens para monetizar no Instagram, TikTok e parcerias com marcas.
+          </p>
+</details>
+<!-- FAQ Item 2 -->
+<details class="group py-4 cursor-pointer">
+<summary class="flex justify-between items-center text-sm md:text-base font-bold text-brand-dark list-none">
+<span>Preciso entender de inteligência artificial?</span>
+<span class="text-brand-subtle group-open:rotate-45 transition transform duration-200 text-lg font-mono">+</span>
+</summary>
+<p class="text-xs md:text-sm text-brand-subtle mt-3 leading-relaxed">
+            Não. O treinamento foi montado do absoluto zero. Qualquer pessoa, mesmo sem conhecimento técnico prévio, consegue acompanhar copiando os prompts e processos ensinados nas aulas.
+          </p>
+</details>
+<!-- FAQ Item 3 -->
+<details class="group py-4 cursor-pointer">
+<summary class="flex justify-between items-center text-sm md:text-base font-bold text-brand-dark list-none">
+<span>Preciso saber editar vídeos?</span>
+<span class="text-brand-subtle group-open:rotate-45 transition transform duration-200 text-lg font-mono">+</span>
+</summary>
+<p class="text-xs md:text-sm text-brand-subtle mt-3 leading-relaxed">
+            Não é necessário. Mostramos como utilizar ferramentas automáticas e aplicativos simples para montagem e finalização com qualidade profissional.
+          </p>
+</details>
+<!-- FAQ Item 4 -->
+<details class="group py-4 cursor-pointer">
+<summary class="flex justify-between items-center text-sm md:text-base font-bold text-brand-dark list-none">
+<span>Preciso aparecer?</span>
+<span class="text-brand-subtle group-open:rotate-45 transition transform duration-200 text-lg font-mono">+</span>
+</summary>
+<p class="text-xs md:text-sm text-brand-subtle mt-3 leading-relaxed">
+            De forma alguma! Toda a premissa é criar uma personagem 100% digital que estará na frente das câmeras por você, permitindo total anonimato.
+          </p>
+</details>
+<!-- FAQ Item 5 -->
+<details class="group py-4 cursor-pointer">
+<summary class="flex justify-between items-center text-sm md:text-base font-bold text-brand-dark list-none">
+<span>Consigo acompanhar e fazer tudo pelo celular?</span>
+<span class="text-brand-subtle group-open:rotate-45 transition transform duration-200 text-lg font-mono">+</span>
+</summary>
+<p class="text-xs md:text-sm text-brand-subtle mt-3 leading-relaxed">
+            Sim! As ferramentas modernas operam totalmente através de navegadores ou apps mobile em servidores na nuvem, sem exigir computador com placas de vídeo caras.
+          </p>
+</details>
+<!-- FAQ Item 6 -->
+<details class="group py-4 cursor-pointer">
+<summary class="flex justify-between items-center text-sm md:text-base font-bold text-brand-dark list-none">
+<span>Por quanto tempo tenho acesso?</span>
+<span class="text-brand-subtle group-open:rotate-45 transition transform duration-200 text-lg font-mono">+</span>
+</summary>
+<p class="text-xs md:text-sm text-brand-subtle mt-3 leading-relaxed">
+            Você terá acesso garantido pelo período contratado com todas as atualizações inclusas que forem liberadas para a sua turma.
+          </p>
+</details>
+<!-- FAQ Item 7 -->
+<details class="group py-4 cursor-pointer">
+<summary class="flex justify-between items-center text-sm md:text-base font-bold text-brand-dark list-none">
+<span>Quais ferramentas de IA são utilizadas?</span>
+<span class="text-brand-subtle group-open:rotate-45 transition transform duration-200 text-lg font-mono">+</span>
+</summary>
+<p class="text-xs md:text-sm text-brand-subtle mt-3 leading-relaxed">
+            Utilizamos as melhores e mais acessíveis ferramentas do mercado para renderização de imagem fotorrealista, troca e retenção de rostos (face-swap/LoRA) e animação de sincronização labial.
+          </p>
+</details>
+<!-- FAQ Item 8 -->
+<details class="group py-4 cursor-pointer">
+<summary class="flex justify-between items-center text-sm md:text-base font-bold text-brand-dark list-none">
+<span>Quando recebo acesso?</span>
+<span class="text-brand-subtle group-open:rotate-45 transition transform duration-200 text-lg font-mono">+</span>
+</summary>
+<p class="text-xs md:text-sm text-brand-subtle mt-3 leading-relaxed">
+            O acesso é liberado instantaneamente no seu e-mail logo após a confirmação do pagamento via Pix ou Cartão de Crédito.
+          </p>
+</details>
+</div>
+</div>
+</section>
+<!-- END: FAQSection -->
+<!-- BEGIN: FinalCTAAndFooter -->
+<footer class="pt-20 pb-12 px-4 bg-white relative overflow-hidden" data-purpose="final-cta-footer">
+<!-- Subtle Orange Glow Center Background -->
+<div class="absolute inset-x-0 top-0 h-96 glow-aura pointer-events-none"></div>
+<div class="max-w-[1080px] mx-auto text-center relative z-10">
+<!-- Final CTA Box -->
+<div class="max-w-2xl mx-auto mb-20">
+<span class="text-[11px] md:text-xs font-bold tracking-widest text-brand-orange uppercase">A NOVA CREATOR ECONOMY</span>
+<h2 class="text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-brand-dark mt-2">
+          A próxima influenciadora<br/>
+<span class="text-brand-muted font-normal">pode nem existir.</span>
+</h2>
+<p class="text-xs md:text-sm text-brand-subtle font-semibold tracking-wide uppercase mt-3 mb-8">
+          Mas o conteúdo dela pode estar em todo lugar.
+        </p>
+<a class="inline-flex items-center justify-center px-8 md:px-10 py-4 rounded-full bg-brand-orange hover:bg-brand-orange-dark text-white font-bold text-xs md:text-sm tracking-wide uppercase transition duration-300 transform hover:-translate-y-0.5 shadow-xl shadow-orange-500/25" href="#oferta">
+          Quero aprender a criar com IA
+        </a>
+<p class="text-[11px] text-brand-muted mt-3">Acesso imediato • Pagamento 100% seguro</p>
+</div>
+<!-- Footer Divider -->
+<div class="w-full h-px bg-brand-borderLight mb-8"></div>
+<!-- Footer Meta & Links -->
+<div class="flex flex-col sm:flex-row items-center justify-between text-xs text-brand-muted gap-4">
+<div class="flex items-center gap-2">
+<span class="font-black text-brand-dark text-sm tracking-tighter">INFLUVENCE</span>
+<span>© 2026 Todos os direitos reservados.</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="hover:text-brand-dark transition" href="#">Termos de Uso</a>
+<a class="hover:text-brand-dark transition" href="#">Políticas de Privacidade</a>
+<a class="hover:text-brand-dark transition" href="#">Suporte</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: FinalCTAAndFooter -->
+</body></html>

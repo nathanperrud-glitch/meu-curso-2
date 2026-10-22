@@ -1,0 +1,6 @@
+{
+  "name": "Influvence — Crie Influenciadoras Realistas com IA",
+  "description": "Plataforma e método completo para criar influenciadoras digitais ultra-realistas com inteligência artificial, consistência facial e monetização em escala.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
